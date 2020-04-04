@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang ="en">
 
-<head>
+    <head>
 
     <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <title>Weather Dashboard</title>
-</head>
+    </head>
 
-<body>
-    <header class ="cotainer-fluid text-center text-white bg-dark p-2">
+    <body>
+        <header class ="cotainer-fluid text-center text-white bg-dark p-2">
         <h1>Weather Dashboard </h1>
-    </header>
+     </header>
 
-    <div class= "container-fluid">
+        <div class= "container-fluid">
         <div class ="row">
             <div class = "col-sm-3" id="citySearch">
                 <div class="row">
@@ -53,9 +53,43 @@
                 </div>
                 <div class ="row">
                     <h2 id="fiveDay">5-day Forecast</h2>
+                </div>
+
+
+                <div class ="row">
+                    <div class ="col-sm">
+                        <div id= "one" class="col-md-2">
+                            <h3 id="Date"></h3>
+                            <h4 id="Temp"></h4>
+                            <img src="" id="icon">
+                            <div id ="dayHum"></div>
+                            <div id ="dayWind"></div>
+                        </div>
+                        <div id ="two" class='col-md-2'>
+                        </div>
+
+                        <div id ="three" class="col-md-2">
+                        </div>
+
+                        <div id ="four" class ="col-md-2">
+
+                        </div>
+                        
+                        <div id="five" class ="col-md-2">
+
+                        </div>
+                    </div>
+
             </div>
 
 
         </div>
-    </div>
+        </div>
+
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+         <script src="assets/js/script.js"></script>
+    </body>
+
 </html>
