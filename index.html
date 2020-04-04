@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang ="en">
+
+<head>
+
+    <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <header class ="cotainer-fluid text-center text-white bg-dark p-2">
+        <h1>Weather Dashboard </h1>
+    </header>
+
+    <div class= "container-fluid">
+        <div class ="row">
+            <div class = "col-sm-3" id="citySearch">
+                <div class="row">
+                    <input type ="text" id="city" placeholder="please enter your city here">
+                    <button class="btn btn-secondary" id="submit">Submit.</button>
+                </div>
+
+                <div class="row" id="city">
+                    <table class ="table">
+                        <thead>
+                            <tr id ="tableTop">
+                                <th scope ="col" id="history">Latest Searches</th>
+                                </tr>
+                        </thead>
+                        <tbody id="tableBody">
+                            
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+            <div class="col-sm-9" id="weatherStats">
+                <div class = "row" id="currentWeather">
+                    <div class="col-sm" id="currentStats">
+                        <h1>today's forecast</h1>
+                        <div id ="highTemp"></div>
+                        <div id="lowTemp"></div>
+                        <div id="humidity"></div>
+                        <div id= "windSpeed"></div>
+                        <div id="info"></div>
+                    </div>
+                </div>
+                <div class ="row">
+                    <h2 id="fiveDay">5-day Forecast</h2>
+            </div>
+
+
+        </div>
+    </div>
+</html>
