@@ -78,16 +78,46 @@ $(document).ready(function(){
     
     
     // ids and add values -city
+    var inputRow =$("<tr>");
+    var inputRow =$("<td>");
+    var cityInfo =$("<button>");
+    
+    //setting new attribute btn
+    cityInfo.text(response.name);
+    cityInfo.attr("class", "button")
+    cityInfo.attr("id", "newBtn")
+    cityInfo.attr("city", response.name);
 
+    $("#inputCol").append(cityInfo);
+    $("#inputRow").append(inputCol);
+    $("#tableBody").prepend(inputRow);
 
+    //cityInfo.attr({"class"},)
 
 
     //save to local storage
+    cities = JSON.parse(localStorage.getItem("city"));
+    if (cities === null){
+        cities =[];
+    }
+    cities.push(repsonse.name);
+    localStorage.setItem("city", JSON.stringify(cities));
+
+    //get method - forecast edition 
+
+    var queryURLForecast = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&appid=ccf5e1e50778ef765a4f1275e12f7aaa";
 
 
-
-    //get method - forecast
-
+    $.ajax({
+        url: queryURLForecast,
+        method: "GET"
+    })
+    .then(function (repsonse){
+        console.log(response);
+        localStorage.setItem("forecast", JSON.stringify(response));
+        result = JSON.parse(localStorage.getItem("forecast"));
+        days =[]
+    })
 
     //call ids and values -forecast
 
