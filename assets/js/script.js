@@ -116,8 +116,19 @@ $(document).ready(function(){
         console.log(response);
         localStorage.setItem("forecast", JSON.stringify(response));
         result = JSON.parse(localStorage.getItem("forecast"));
-        days =[]
+        days =[1, 2, 3, 4, 5]
     })
+
+    for(var i=0; i< days.length;i++){
+        var date = results.list[i].dt;
+        var idDay = results.list[i].weather[0].main;
+        var tempDay= results.list[i].main.temp;
+        var dayFar = Math.floor(((tempDay - 273.15) * 1.8) + 32);
+        var humidDay = result.list[i].main.humidity
+        var wsDay = results.list[i].wind.speed;
+        var infoDay= results.list[i].weather[0].description;
+        var iconDay =resuts.list[i].weather[0].icon 
+    }
 
     //call ids and values -forecast
 
