@@ -13,28 +13,28 @@
     </head>
 
     <body>
-        <header class ="cotainer-fluid text-center text-white bg-dark p-2">
+        <header class ="cotainer-fluid text-center text-white bg-dark p-2" id="heading">
         <h1>Weather Dashboard </h1>
-        <h2 id="dashboard"></h2>
-        <p class= "lead" id = "dashboardDate"></p>
+        <h2 id="cityHeader"></h2>
+        <p class= "lead" id = "dashboardDisplay"></p>
      </header>
 
         <div class= "container-fluid">
         <div class ="row">
-            <div class = "col-sm-3" id="citySearch">
+            <div class = "col-sm-3" id="search">
                 <div class="row">
                     <input type ="text" id="city" placeholder="please enter your city here">
                     <button class="btn btn-secondary" id="submit">Submit.</button>
                 </div>
 
-                <div class="row" id="showCity">
+                <div class="row" id="cityDiv">
                     <table class ="table">
                         <thead>
-                            <tr id ="tableTop">
-                                <th scope ="col" id="history">Latest Searches</th>
+                            <tr id ="tableHead">
+                                <th scope ="col" id="recent">Latest Searches</th>
                                 </tr>
                         </thead>
-                        <tbody id="tableBody">
+                        <tbody id="tBody">
                             
                         </tbody>
                     </table>
@@ -43,8 +43,8 @@
 
             </div>
             <div class="col-sm-9" id="weatherStats">
-                <div class = "row" id="currentWeather">
-                    <div class="col-sm" id="currentStats">
+                <div class = "row" id="todaysWeather">
+                    <div class="col-sm" id="dailyWeather">
                         <h1>today's forecast</h1>
                         <div id ="highTemp"></div>
                         <div id="lowTemp"></div>
@@ -61,52 +61,52 @@
                 <div class ="row">
                     <div class ="col-sm">
 
-                        <div id= "one" class="col-md-2">
+                        <div id= "dayOne" class="col-md-2">
 
-                            <h3 id="day1_date"></h3>
-                            <h4 id="day1_temp"></h4>
-                            <img src="" id="icon1">
-                            <div id ="day1_wind"></div>
-                            <div id ="day1_humidity"></div>
-                            <div id ="day1_des"></div>
+                            <h3 id="day4_date"></h3>
+                            <h4 id="day4_temp"></h4>
+                            <img src="" id="icon4">
+                            <div id ="day4_wind"></div>
+                            <div id ="day4_humidity"></div>
+                            
                         </div>
-                        <div id ="two" class='col-md-2'>
-                            <h3 id ="day2_date"></h3>
-                            <h2 id = "day2_temp"></h2>
-                            <img src="" id="icon2">
-                            <div id ="day2_wind"></div>
-                            <div id ="day2_humidity"></div>
-                             <div id ="day2_des"></div>
+                        <div id ="dayTwo" class='col-md-2'>
+                            <h3 id ="day12_date"></h3>
+                            <h2 id = "day12_temp"></h2>
+                            <img src="" id="icon12">
+                            <div id ="day12_wind"></div>
+                            <div id ="day12_humidity"></div>
+                       
 
                             
                         </div>
 
-                        <div id ="three" class="col-md-2">
-                            <h3 id ="day3_date"></h3>
-                            <h2 id = "day3_temp"></h2>
-                            <img src="" id="icon3">
-                            <div id ="day3_wind"></div>
-                            <div id ="day3_humidity"></div>
-                             <div id ="day3_des"></div>
+                        <div id ="dayThree" class="col-md-2">
+                            <h3 id ="day20_date"></h3>
+                            <h2 id = "day20_temp"></h2>
+                            <img src="" id="icon20">
+                            <div id ="day20_wind"></div>
+                            <div id ="day20_humidity"></div>
+                             <div id ="day20_des"></div>
                         </div>
 
-                        <div id ="four" class ="col-md-2">
-                            <h3 id ="day4_date"></h3>
-                            <h2 id = "day4_temp"></h2>
-                            <img src="" id="icon4">
-                            <div id ="day4_wind"></div>
-                            <div id ="day4_humidity"></div>
-                             <div id ="day4_des"></div>
+                        <div id ="dayFour" class ="col-md-2">
+                            <h3 id ="day28_date"></h3>
+                            <h2 id = "day28_temp"></h2>
+                            <img src="" id="icon28">
+                            <div id ="day28_wind"></div>
+                            <div id ="day28_humidity"></div>
+                            
 
                         </div>
                         
-                        <div id="five" class ="col-md-2">
-                            <h3 id ="day5_date"></h3>
-                            <h2 id = "day5_temp"></h2>
-                            <img src="" id="icon5">
-                            <div id ="day5_wind"></div>
-                            <div id ="day5_humidity"></div>
-                             <div id ="day5_des"></div>
+                        <div id="dayFive" class ="col-md-2">
+                            <h3 id ="day36_date"></h3>
+                            <h2 id = "day36_temp"></h2>
+                            <img src="" id="icon36">
+                            <div id ="day36_wind"></div>
+                            <div id ="day36_humidity"></div>
+                       
 
                         </div>
                     </div>
