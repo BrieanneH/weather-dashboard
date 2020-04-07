@@ -15,6 +15,8 @@
     <body>
         <header class ="cotainer-fluid text-center text-white bg-dark p-2">
         <h1>Weather Dashboard </h1>
+        <h2 id="dashboard"></h2>
+        <p class= "lead" id = "dashboardDate"></p>
      </header>
 
         <div class= "container-fluid">
@@ -25,7 +27,7 @@
                     <button class="btn btn-secondary" id="submit">Submit.</button>
                 </div>
 
-                <div class="row" id="city">
+                <div class="row" id="showCity">
                     <table class ="table">
                         <thead>
                             <tr id ="tableTop">
@@ -66,6 +68,7 @@
                             <img src="" id="icon1">
                             <div id ="day1_wind"></div>
                             <div id ="day1_humidity"></div>
+                            <div id ="day1_des"></div>
                         </div>
                         <div id ="two" class='col-md-2'>
                             <h3 id ="day2_date"></h3>
@@ -73,6 +76,8 @@
                             <img src="" id="icon2">
                             <div id ="day2_wind"></div>
                             <div id ="day2_humidity"></div>
+                             <div id ="day2_des"></div>
+
                             
                         </div>
 
@@ -82,6 +87,7 @@
                             <img src="" id="icon3">
                             <div id ="day3_wind"></div>
                             <div id ="day3_humidity"></div>
+                             <div id ="day3_des"></div>
                         </div>
 
                         <div id ="four" class ="col-md-2">
@@ -90,6 +96,7 @@
                             <img src="" id="icon4">
                             <div id ="day4_wind"></div>
                             <div id ="day4_humidity"></div>
+                             <div id ="day4_des"></div>
 
                         </div>
                         
@@ -99,6 +106,7 @@
                             <img src="" id="icon5">
                             <div id ="day5_wind"></div>
                             <div id ="day5_humidity"></div>
+                             <div id ="day5_des"></div>
 
                         </div>
                     </div>
@@ -110,8 +118,9 @@
         </div>
 
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+        <script src= "https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       
+        <script src= "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
          <script src="assets/js/script.js"></script>
     </body>
 
