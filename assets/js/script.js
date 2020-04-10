@@ -152,7 +152,7 @@ $(document).ready(function(){
     function displayBtn () {
        // console.log =($(this).attr("city-name"));
         var cityTwo =$(this).attr("city-name");
-        var queryURL = "https://api.openweathermap.org/data/2.5/weather?id=" +
+        var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" +
         cityTwo+ "&appid=ccf5e1e50778ef765a4f1275e12f7aaa";
 
          $.ajax({
