@@ -8,7 +8,7 @@ function makeRow(text){
     let inputText = $("input").val()
 
      var APIKEY = "ccf5e1e50778ef765a4f1275e12f7aaa";
-     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q="+inputText + "&units=imperial&appid=" + "&apikey=" + APIKey;
+     var queryURL = "https://api.openweathermap.org/data/2.5/weather?q="+inputText + "&units=imperial&appid=" + "&apikey=" + APIKEY;
 
      localStorage.setItem("history", JSON.stringify(inputText));
      $("#buttons-view").val(localStorage.getItem(inputText));
@@ -19,7 +19,7 @@ function makeRow(text){
 
       .then(function(response){
 
-        $(".city").html("<h1" + response.name + "Weather Info</h1>");
+        $(".city").html("<h1>" + response.name + "Weather Info</h1>");
         $(".temp").text("temperature (F) " + response.main.temp);
         $(".humidity").text("humidity: " + response.main.humidity);
         $(".wind").text("wind Speed: " + response.wind.speed);
@@ -35,7 +35,7 @@ function makeRow(text){
 
 function uvIndex(lat,lon){
     var APPKEY ="ccf5e1e50778ef765a4f1275e12f7aaa";
-    var queryURL = "http://api.openweathermap.org/data/2.5/uvi?appid="+ APPKEY +appid+"&lat="+lat+"&lon="+lon;
+    var queryURL = "http://api.openweathermap.org/data/2.5/uvi?appid="+ APPKEY + "&lat="+lat+"&lon="+lon;
    
     $.ajax({//get
         url: queryURL,
@@ -49,7 +49,7 @@ function uvIndex(lat,lon){
       })
     }
 
-    var cities=[],
+    var cities=[];
 
     if (localStorage.getItem("cities")) {
         cities = JSON.parse(localStorage.getItem("cities"));//get
@@ -60,7 +60,7 @@ function uvIndex(lat,lon){
 
       function renderButtons(){
 
-          $('#button-view').empty();//delete prior and epmty
+          $('#buttons-view').empty();//delete prior and epmty
 
           for (var i = 0; i < cities.length; i++) {
               var app =$("<button>");
@@ -89,19 +89,21 @@ function uvIndex(lat,lon){
 
       function forecast(cityName){
           var APPKEY= "ccf5e1e50778ef765a4f1275e12f7aaa";
-          var queryURL='http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${APPKEY}'
+          var queryURL=`http://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=${APPKEY}`
 
 
           $.ajax({
           url: queryURL,
           method: "GET"
         })
-        then(function(response) {
+        .then(function(response) {
              
             for (var i = 0; i < 5; i++){
-              var col = $("<div>").addClass("col-md-2")
-              var card = $("<div>").addClass('card bg-primary text-white');
-              var body = $("<div>").addClass("card-body p-2");
+
+                //appending output and creating html vals
+              var col = $("<div>").addClass("col-md-6")
+              var card = $("<div>").addClass('card bg-primary');
+              var body = $("<div>").addClass("card-body");
 
               var title = $("<h2>").addClass("card-title").text(response.list[i].dt_txt);
 
@@ -109,7 +111,7 @@ function uvIndex(lat,lon){
               var p1 = $("<p>").addClass("card-text").text("Temp: " + response.list[i].main.temp_max + " °F");
               var p2 = $("<p>").addClass("card-text").text("Humidity: " + response.list[i].main.humidity + "%");
               col.append(card.append(body.append(title, img, p1, p2)));
-              $(".well").append(col);
+              $(".jumbotron").append(col);
       
             }
             
